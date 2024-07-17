@@ -1,0 +1,22 @@
+server:
+  port: 8021
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=4simm
+    username: postgres
+    password: 2004
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
